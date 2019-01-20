@@ -1,0 +1,11 @@
+{
+  "modid": "trainingmod",
+  "name": "trainingmod",
+  "author_list": ["levelnineteen"],
+  "description": "",
+  "version": "0.0.1",
+  "sts_version": "01-19-2019",
+  "mts_version": "3.6.0",
+  "dependencies": ["basemod"],
+  "update_json": ""
+}

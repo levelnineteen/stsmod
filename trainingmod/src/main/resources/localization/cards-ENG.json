@@ -1,0 +1,14 @@
+{
+  "trainingmod:TestAttack": {
+    "NAME": "TEST Attack",
+    "DESCRIPTION": "Just TEST."
+  },
+  "trainingmod:TestSkill": {
+    "NAME": "TEST Skill",
+    "DESCRIPTION": "Just TEST."
+  },
+  "trainingmod:TestPower": {
+    "NAME": "TEST Power",
+    "DESCRIPTION": "Just TEST."
+  }
+}
