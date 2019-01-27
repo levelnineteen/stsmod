@@ -27,10 +27,11 @@ import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect;
 
 import training_mod.cards.*;
+import training_mod.relics.*;
 import training_mod.patches.*;
 
 public class TrainingChar extends CustomPlayer {
-    public static final CharacterStrings charStrings = CardCrawlGame.languagePack.getCharacterString("TrainingChar");
+    public static final CharacterStrings charStrings = CardCrawlGame.languagePack.getCharacterString("trainingmod:TrainingChar");
     public static final int ENERGY_PER_TURN = 3; // how much energy you get every turn
     public static final String TRAININGCHAR_SHOULDER_2 = "img/char/trainingShoulder.png"; // campfire pose
     public static final String TRAININGCHAR_SHOULDER_1 = "img/char/trainingShoulder.png"; // another campfire pose
@@ -72,8 +73,8 @@ public class TrainingChar extends CustomPlayer {
     }
     @Override
     public String getVampireText() {
-        //ヴァンパイアイベントのことらしいがよくわからん
-        return Vampires.DESCRIPTIONS[1];
+        //ヴァンパイアイベントのこと。たぶん0がアイアンクラッドで1がサイレントだと思うけど・・・
+        return Vampires.DESCRIPTIONS[0];
     }
     public Color getCardRenderColor() {
         return CardHelper.getColor(100.0f, 50.0f, 50.0f);   //TRAINING_COLOR_BGと同じがいい？
@@ -121,22 +122,22 @@ public class TrainingChar extends CustomPlayer {
 
     public ArrayList<String> getStartingDeck() { // starting deck 'nuff said
         ArrayList<String> retVal = new ArrayList<>();
-        retVal.add("TestAttack");
-        retVal.add("TestAttack");
-        retVal.add("TestAttack");
-        retVal.add("TestAttack");
-        retVal.add("TestAttack");
-        retVal.add("TestAttack");
-        retVal.add("TestAttack");
-        retVal.add("TestAttack");
-        retVal.add("TestAttack");
+        retVal.add(TestAttack.ID);
+        retVal.add(TestAttack.ID);
+        retVal.add(TestAttack.ID);
+        retVal.add(TestAttack.ID);
+        retVal.add(TestAttack.ID);
+        retVal.add(TestAttack.ID);
+        retVal.add(TestAttack.ID);
+        retVal.add(TestAttack.ID);
+        retVal.add(TestAttack.ID);
         return retVal;
     }
 
     public ArrayList<String> getStartingRelics() { // starting relics - also simple
         ArrayList<String> retVal = new ArrayList<>();
-        retVal.add("TestRelic");
-        UnlockTracker.markRelicAsSeen("TestRelic");
+        retVal.add(TestRelic.ID);
+        UnlockTracker.markRelicAsSeen(TestRelic.ID);
         return retVal;
     }
 

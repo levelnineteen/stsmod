@@ -1,8 +1,5 @@
 import basemod.BaseMod;
-import basemod.interfaces.EditCardsSubscriber;
-import basemod.interfaces.EditCharactersSubscriber;
-import basemod.interfaces.EditRelicsSubscriber;
-import basemod.interfaces.EditStringsSubscriber;
+import basemod.interfaces.*;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.badlogic.gdx.graphics.Color;
@@ -12,11 +9,15 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.localization.RelicStrings;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import training_mod.patches.*;
 import training_mod.relics.*;
 
 @SpireInitializer
 public class Main implements
+        PostInitializeSubscriber,   //バッジとか表示するやつ？
         EditCardsSubscriber,   // カードを追加する場合にimplementする
         EditRelicsSubscriber,   //レリックを追加する場合にimplement
         EditStringsSubscriber,  // 言語ファイルを読み込む場合に implementする
@@ -32,6 +33,12 @@ public class Main implements
     private static final String POWER_PORT_TRAINING         = "img/cards/bg_power_1024.png";
     private static final String ENERGY_ORB_PORT_TRAINING = "img/cards/orb_1024.png";
     private static final String ENERGY_ORB_CARD_TRAINING = "img/cards/orb_ui.png";
+
+    private static final String MODNAME = "TrainingMod";
+    private static final String AUTHOR = "levelninteen";
+    private static final String DESCRIPTION = "TEST.";
+
+    public static final Logger logger = LogManager.getLogger(Main.class.getName());
 
 
     public Main(){
@@ -93,9 +100,16 @@ public class Main implements
 
     public void receiveEditRelics() {
         //レリックの追加
+        logger.info("begin editing relics");
         BaseMod.addRelicToCustomPool(
                 new TestRelic(),
-                AbstractCardEnum.TRAINING_COLOR //カラーに対して追加する
+                AbstractCardEnum.TRAINING_COLOR //カラーに対して追加する。共通レリックはまた別のメソッド
         );
+        logger.info("done editing relics");
+    }
+
+    public void receivePostInitialize(){
+        Texture badgeTexture = new Texture("img/TrainingBadge.png");
+        BaseMod.registerModBadge(badgeTexture, MODNAME, AUTHOR, DESCRIPTION, null);
     }
 }
