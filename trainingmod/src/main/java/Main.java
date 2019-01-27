@@ -1,6 +1,7 @@
 import basemod.BaseMod;
 import basemod.interfaces.EditCardsSubscriber;
 import basemod.interfaces.EditCharactersSubscriber;
+import basemod.interfaces.EditRelicsSubscriber;
 import basemod.interfaces.EditStringsSubscriber;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.megacrit.cardcrawl.core.Settings;
@@ -10,13 +11,16 @@ import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.localization.RelicStrings;
+
 import training_mod.patches.*;
+import training_mod.relics.*;
 
 @SpireInitializer
 public class Main implements
-    EditCardsSubscriber,   // カードを追加する場合にimplementする
-    EditStringsSubscriber,  // 言語ファイルを読み込む場合に implementする
-    EditCharactersSubscriber //キャラを追加する場合にimplementする
+        EditCardsSubscriber,   // カードを追加する場合にimplementする
+        EditRelicsSubscriber,   //レリックを追加する場合にimplement
+        EditStringsSubscriber,  // 言語ファイルを読み込む場合に implementする
+        EditCharactersSubscriber //キャラを追加する場合にimplementする
 {
     private static final Color TRAINING_COLOR_BG = CardHelper.getColor(100.0f, 50.0f, 50.0f);
     private static final String ATTACK_TRAINING         = "img/cards/bg_attack_512.png";
@@ -85,5 +89,13 @@ public class Main implements
                 TrainingClassEnum.TrainingClass
         );
 
+    }
+
+    public void receiveEditRelics() {
+        //レリックの追加
+        BaseMod.addRelicToCustomPool(
+                new TestRelic(),
+                AbstractCardEnum.TRAINING_COLOR //カラーに対して追加する
+        );
     }
 }
