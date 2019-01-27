@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.localization.RelicStrings;
+import com.megacrit.cardcrawl.localization.PowerStrings;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -76,6 +77,7 @@ public class Main implements
         BaseMod.loadCustomStringsFile(CardStrings.class, "localization/cards-" + Settings.language + ".json");
         BaseMod.loadCustomStringsFile(RelicStrings.class, "localization/relics-" + Settings.language + ".json");
         BaseMod.loadCustomStringsFile(CharacterStrings.class, "localization/char-" + Settings.language + ".json");
+        BaseMod.loadCustomStringsFile(PowerStrings.class, "localization/powers-" + Settings.language + ".json");
     }
 
     @Override
@@ -84,6 +86,42 @@ public class Main implements
         BaseMod.addCard(new training_mod.cards.TestAttack());
         BaseMod.addCard(new training_mod.cards.TestPower());
         BaseMod.addCard(new training_mod.cards.TestSkill());
+        BaseMod.addCard(new training_mod.cards.CommonAttack0());
+        BaseMod.addCard(new training_mod.cards.CommonAttack1());
+        BaseMod.addCard(new training_mod.cards.CommonAttack2());
+        BaseMod.addCard(new training_mod.cards.CommonAttack3());
+        BaseMod.addCard(new training_mod.cards.UncommonAttack0());
+        BaseMod.addCard(new training_mod.cards.UncommonAttack1());
+        BaseMod.addCard(new training_mod.cards.UncommonAttack2());
+        BaseMod.addCard(new training_mod.cards.UncommonAttack3());
+        BaseMod.addCard(new training_mod.cards.RareAttack0());
+        BaseMod.addCard(new training_mod.cards.RareAttack1());
+        BaseMod.addCard(new training_mod.cards.RareAttack2());
+        BaseMod.addCard(new training_mod.cards.RareAttack3());
+        BaseMod.addCard(new training_mod.cards.CommonSkill0());
+        BaseMod.addCard(new training_mod.cards.CommonSkill1());
+        BaseMod.addCard(new training_mod.cards.CommonSkill2());
+        BaseMod.addCard(new training_mod.cards.CommonSkill3());
+        BaseMod.addCard(new training_mod.cards.UncommonSkill0());
+        BaseMod.addCard(new training_mod.cards.UncommonSkill1());
+        BaseMod.addCard(new training_mod.cards.UncommonSkill2());
+        BaseMod.addCard(new training_mod.cards.UncommonSkill3());
+        BaseMod.addCard(new training_mod.cards.RareSkill0());
+        BaseMod.addCard(new training_mod.cards.RareSkill1());
+        BaseMod.addCard(new training_mod.cards.RareSkill2());
+        BaseMod.addCard(new training_mod.cards.RareSkill3());
+        BaseMod.addCard(new training_mod.cards.CommonPower0());
+        BaseMod.addCard(new training_mod.cards.CommonPower1());
+        BaseMod.addCard(new training_mod.cards.CommonPower2());
+        BaseMod.addCard(new training_mod.cards.CommonPower3());
+        BaseMod.addCard(new training_mod.cards.UncommonPower0());
+        BaseMod.addCard(new training_mod.cards.UncommonPower1());
+        BaseMod.addCard(new training_mod.cards.UncommonPower2());
+        BaseMod.addCard(new training_mod.cards.UncommonPower3());
+        BaseMod.addCard(new training_mod.cards.RarePower0());
+        BaseMod.addCard(new training_mod.cards.RarePower1());
+        BaseMod.addCard(new training_mod.cards.RarePower2());
+        BaseMod.addCard(new training_mod.cards.RarePower3());
     }
 
     @Override

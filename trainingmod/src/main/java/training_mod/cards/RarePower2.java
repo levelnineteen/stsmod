@@ -1,62 +1,68 @@
 package training_mod.cards;
 
 import basemod.abstracts.CustomCard;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.rooms.AbstractRoom.RoomPhase;
 import training_mod.patches.AbstractCardEnum;
-//ブロックに必要
-import basemod.helpers.BaseModCardTags;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import training_mod.powers.TestPowerGold;
 
-public class TestSkill extends CustomCard {
-    public static final String ID = "trainingmod:TestSkill";
+
+public class RarePower2 extends CustomCard {
+    public static final String ID = "trainingmod:RarePower2";
     // getCardStringsで Mainクラスにて読み込んだ cards-JPN.json 内の文字列情報を取得する
     private static CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     public static final String IMG_PATH = "img/cards/card.png";
     private static final int COST = 0;
-    private static final int BLOCK_AMT = 4;
-    private static final int UPGRADE_PLUS_BLOCK = 3;
+    private static final int GETMONEY = 100;
+    private static final int UPGRADE_GETMONEY = 10;
 
-    public TestSkill() {
+    public RarePower2() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION,
-                CardType.SKILL,
+                CardType.POWER,
                 AbstractCardEnum.TRAINING_COLOR,
-                CardRarity.BASIC,
+                CardRarity.RARE,
                 CardTarget.SELF);
-        this.tags.add(BaseModCardTags.BASIC_DEFEND);
-        this.baseBlock = BLOCK_AMT;
+        this.magicNumber = this.baseMagicNumber = GETMONEY;
+
 
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        // ブロックを得る
-        AbstractDungeon.actionManager.addToBottom(
-                new GainBlockAction(p, p, this.block)
-        );
-    }
-    @Override
-    public boolean isDefend() {
-        return true;
+        // 戦闘終了時にお金をもらう
+        if (AbstractDungeon.getCurrRoom().phase == RoomPhase.COMBAT) {
+
+            AbstractDungeon.getCurrRoom().addGoldToRewards(this.magicNumber);
+            AbstractDungeon.actionManager.addToBottom(
+                    new ApplyPowerAction(
+                            p,
+                            p,
+                            new TestPowerGold(p, this.magicNumber),
+                            this.magicNumber
+                    )
+            );
+        }
     }
 
     @Override
     public AbstractCard makeCopy() {
-        return new TestSkill();
+        return new RarePower2();
     }
 
     // カードアップグレード時の処理
     @Override
     public void upgrade() {
         if (!this.upgraded) {
-            upgradeName();
-            upgradeBlock(UPGRADE_PLUS_BLOCK);
+            this.upgradeName();
+            this.upgradeDamage(UPGRADE_GETMONEY);
         }
     }
 }

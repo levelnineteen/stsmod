@@ -1,0 +1,9 @@
+{
+  "trainingmod:TestPowerGold": {
+    "NAME": "TestPower",
+    "DESCRIPTIONS": [
+      "you can get",
+      "gold"
+    ]
+  }
+}

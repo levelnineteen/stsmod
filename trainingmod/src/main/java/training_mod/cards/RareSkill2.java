@@ -1,6 +1,8 @@
 package training_mod.cards;
 
 import basemod.abstracts.CustomCard;
+import basemod.helpers.BaseModCardTags;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -8,12 +10,11 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import training_mod.patches.AbstractCardEnum;
-//ブロックに必要
-import basemod.helpers.BaseModCardTags;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 
-public class TestSkill extends CustomCard {
-    public static final String ID = "trainingmod:TestSkill";
+//ブロックに必要
+
+public class RareSkill2 extends CustomCard {
+    public static final String ID = "trainingmod:RareSkill2";
     // getCardStringsで Mainクラスにて読み込んだ cards-JPN.json 内の文字列情報を取得する
     private static CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String NAME = cardStrings.NAME;
@@ -23,11 +24,11 @@ public class TestSkill extends CustomCard {
     private static final int BLOCK_AMT = 4;
     private static final int UPGRADE_PLUS_BLOCK = 3;
 
-    public TestSkill() {
+    public RareSkill2() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION,
                 CardType.SKILL,
                 AbstractCardEnum.TRAINING_COLOR,
-                CardRarity.BASIC,
+                CardRarity.RARE,
                 CardTarget.SELF);
         this.tags.add(BaseModCardTags.BASIC_DEFEND);
         this.baseBlock = BLOCK_AMT;
@@ -48,7 +49,7 @@ public class TestSkill extends CustomCard {
 
     @Override
     public AbstractCard makeCopy() {
-        return new TestSkill();
+        return new RareSkill2();
     }
 
     // カードアップグレード時の処理

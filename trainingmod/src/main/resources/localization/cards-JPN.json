@@ -1,14 +1,158 @@
 {
   "trainingmod:TestAttack": {
-    "NAME": "テストアタック",
+  "NAME": "テストアタック",
+  "DESCRIPTION": "ただのテストなんだ"
+},
+  "trainingmod:CommonAttack0": {
+    "NAME": "コモンアタック0",
+    "DESCRIPTION": "ただのテストなんだ"
+  },
+  "trainingmod:CommonAttack1": {
+    "NAME": "コモンアタック1",
+    "DESCRIPTION": "ただのテストなんだ"
+  },
+  "trainingmod:CommonAttack2": {
+    "NAME": "コモンアタック2",
+    "DESCRIPTION": "ただのテストなんだ"
+  },
+  "trainingmod:CommonAttack3": {
+    "NAME": "コモンアタック3",
+    "DESCRIPTION": "ただのテストなんだ"
+  },
+  "trainingmod:UncommonAttack0": {
+    "NAME": "アンコモンアタック0",
+    "DESCRIPTION": "ただのテストなんだ"
+  },
+  "trainingmod:UncommonAttack1": {
+    "NAME": "アンコモンアタック1",
+    "DESCRIPTION": "ただのテストなんだ"
+  },
+  "trainingmod:UncommonAttack2": {
+  "NAME": "アンコモンアタック2",
+  "DESCRIPTION": "ただのテストなんだ"
+},
+  "trainingmod:UncommonAttack3": {
+    "NAME": "アンコモンアタック3",
+    "DESCRIPTION": "ただのテストなんだ"
+  },
+  "trainingmod:RareAttack0": {
+    "NAME": "レアアタック0",
+    "DESCRIPTION": "ただのテストなんだ"
+  },
+  "trainingmod:RareAttack1": {
+    "NAME": "レアアタック1",
+    "DESCRIPTION": "ただのテストなんだ"
+  },
+  "trainingmod:RareAttack2": {
+    "NAME": "レアアタック2",
+    "DESCRIPTION": "ただのテストなんだ"
+  },
+  "trainingmod:RareAttack3": {
+    "NAME": "レアアタック3",
     "DESCRIPTION": "ただのテストなんだ"
   },
   "trainingmod:TestSkill": {
     "NAME": "テストスキル",
     "DESCRIPTION": "ただのテストなんだ"
   },
+  "trainingmod:CommonSkill0": {
+    "NAME": "コモンスキル0",
+    "DESCRIPTION": "ただのテストなんだ"
+  },
+  "trainingmod:CommonSkill1": {
+    "NAME": "コモンスキル1",
+    "DESCRIPTION": "ただのテストなんだ"
+  },
+  "trainingmod:CommonSkill2": {
+    "NAME": "コモンスキル2",
+    "DESCRIPTION": "ただのテストなんだ"
+  },
+  "trainingmod:CommonSkill3": {
+    "NAME": "コモンスキル3",
+    "DESCRIPTION": "ただのテストなんだ"
+  },
+  "trainingmod:UncommonSkill0": {
+    "NAME": "アンコモンスキル0",
+    "DESCRIPTION": "ただのテストなんだ"
+  },
+  "trainingmod:UncommonSkill1": {
+    "NAME": "アンコモンスキル1",
+    "DESCRIPTION": "ただのテストなんだ"
+  },
+  "trainingmod:UncommonSkill2": {
+    "NAME": "アンコモンスキル2",
+    "DESCRIPTION": "ただのテストなんだ"
+  },
+  "trainingmod:UncommonSkill3": {
+    "NAME": "アンコモンスキル3",
+    "DESCRIPTION": "ただのテストなんだ"
+  },
+  "trainingmod:RareSkill0": {
+    "NAME": "レアスキル0",
+    "DESCRIPTION": "ただのテストなんだ"
+  },
+  "trainingmod:RareSkill1": {
+    "NAME": "レアスキル1",
+    "DESCRIPTION": "ただのテストなんだ"
+  },
+  "trainingmod:RareSkill2": {
+    "NAME": "レアスキル2",
+    "DESCRIPTION": "ただのテストなんだ"
+  },
+  "trainingmod:RareSkill3": {
+    "NAME": "レアスキル3",
+    "DESCRIPTION": "ただのテストなんだ"
+  },
   "trainingmod:TestPower": {
     "NAME": "テストパワー",
+    "DESCRIPTION": "ただのテストなんだ"
+  },
+  "trainingmod:CommonPower0": {
+    "NAME": "コモンパワー0",
+    "DESCRIPTION": "ただのテストなんだ"
+  },
+  "trainingmod:CommonPower1": {
+    "NAME": "コモンパワー1",
+    "DESCRIPTION": "ただのテストなんだ"
+  },
+  "trainingmod:CommonPower2": {
+    "NAME": "コモンパワー2",
+    "DESCRIPTION": "ただのテストなんだ"
+  },
+  "trainingmod:CommonPower3": {
+    "NAME": "コモンパワー3",
+    "DESCRIPTION": "ただのテストなんだ"
+  },
+  "trainingmod:UncommonPower0": {
+    "NAME": "アンコモンパワー0",
+    "DESCRIPTION": "ただのテストなんだ"
+  },
+  "trainingmod:UncommonPower1": {
+    "NAME": "アンコモンパワー1",
+    "DESCRIPTION": "ただのテストなんだ"
+  },
+  "trainingmod:UncommonPower2": {
+    "NAME": "アンコモンパワー2",
+    "DESCRIPTION": "ただのテストなんだ"
+  },
+  "trainingmod:UncommonPower3": {
+    "NAME": "アンコモンパワー3",
+    "DESCRIPTION": "ただのテストなんだ"
+  },
+  "trainingmod:RarePower0": {
+    "NAME": "レアパワー0",
+    "DESCRIPTION": "ただのテストなんだ"
+  },
+  "trainingmod:RarePower1": {
+    "NAME": "レアパワー1",
+    "DESCRIPTION": "ただのテストなんだ"
+  },
+  "trainingmod:RarePower2": {
+    "NAME": "レアパワー2",
+    "DESCRIPTION": "ただのテストなんだ"
+  },
+  "trainingmod:RarePower3": {
+    "NAME": "レアパワー3",
     "DESCRIPTION": "ただのテストなんだ"
   }
 }

@@ -127,10 +127,10 @@ public class TrainingChar extends CustomPlayer {
         retVal.add(TestAttack.ID);
         retVal.add(TestAttack.ID);
         retVal.add(TestAttack.ID);
-        retVal.add(TestAttack.ID);
-        retVal.add(TestAttack.ID);
-        retVal.add(TestAttack.ID);
-        retVal.add(TestAttack.ID);
+        retVal.add(TestSkill.ID);
+        retVal.add(TestSkill.ID);
+        retVal.add(TestSkill.ID);
+        retVal.add(TestPower.ID);
         return retVal;
     }
 

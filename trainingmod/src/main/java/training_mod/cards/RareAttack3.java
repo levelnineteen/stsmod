@@ -13,8 +13,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import training_mod.patches.AbstractCardEnum;
 
-public class TestAttack extends CustomCard {
-    public static final String ID = "trainingmod:TestAttack";
+public class RareAttack3 extends CustomCard {
+    public static final String ID = "trainingmod:RareAttack3";
     // getCardStringsで Mainクラスにて読み込んだ cards-JPN.json 内の文字列情報を取得する
     private static CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String NAME = cardStrings.NAME;
@@ -23,13 +23,16 @@ public class TestAttack extends CustomCard {
     private static final int COST = 0;
     private static final int ATTACK_DMG = 4;
     private static final int UPGRADE_PLUS_DMG = 3;
+    private static final int VULNERABLE_AMT = 1;
+    private static final int UPGRADE_PLUS_VULNERABLE = 1;
 
-    public TestAttack() {
+    public RareAttack3() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION,
                 CardType.ATTACK,
                 AbstractCardEnum.TRAINING_COLOR,
-                CardRarity.BASIC,   //ベースカード
+                CardRarity.RARE,
                 CardTarget.ENEMY);
+        this.magicNumber = this.baseMagicNumber = VULNERABLE_AMT;
         this.damage=this.baseDamage = ATTACK_DMG;
 
     }
@@ -43,11 +46,21 @@ public class TestAttack extends CustomCard {
                         new DamageInfo(p, this.damage, this.damageTypeForTurn),
                         AbstractGameAction.AttackEffect.SLASH_DIAGONAL) // 画面効果
         );
+        // 脆弱化をかける
+        AbstractDungeon.actionManager.addToBottom(
+                new ApplyPowerAction(                                // バフ/デバフはすべて内部的にはパワー扱い
+                        m,
+                        p,
+                        new VulnerablePower(m, this.magicNumber, false), // 脆弱をm(=敵)にかける
+                        this.magicNumber,
+                        true,
+                        AbstractGameAction.AttackEffect.NONE)            // 画面効果
+        );
     }
 
     @Override
     public AbstractCard makeCopy() {
-        return new TestAttack();
+        return new RareAttack3();
     }
 
     // カードアップグレード時の処理
@@ -56,6 +69,7 @@ public class TestAttack extends CustomCard {
         if (!this.upgraded) {
             upgradeName();
             upgradeDamage(UPGRADE_PLUS_DMG);
+            upgradeMagicNumber(UPGRADE_PLUS_VULNERABLE);
         }
     }
 }

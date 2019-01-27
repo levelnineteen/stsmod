@@ -1,0 +1,9 @@
+{
+  "trainingmod:TestPowerGold": {
+    "NAME": "テストパワー",
+    "DESCRIPTIONS": [
+      "戦闘終了時ゴールド",
+      "を得る"
+      ]
+  }
+}

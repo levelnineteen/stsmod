@@ -3,12 +3,156 @@
     "NAME": "TEST Attack",
     "DESCRIPTION": "Just TEST."
   },
+  "trainingmod:CommonAttack0": {
+    "NAME": "Common Attack0",
+    "DESCRIPTION": "Just TEST."
+  },
+  "trainingmod:CommonAttack1": {
+    "NAME": "Common Attack1",
+    "DESCRIPTION": "Just TEST."
+  },
+  "trainingmod:CommonAttack2": {
+    "NAME": "Common Attack2",
+    "DESCRIPTION": "Just TEST."
+  },
+  "trainingmod:CommonAttack3": {
+    "NAME": "Common Attack3",
+    "DESCRIPTION": "Just TEST."
+  },
+  "trainingmod:UncommonAttack0": {
+  "NAME": "UnCommon Attack0",
+  "DESCRIPTION": "Just TEST."
+},
+  "trainingmod:UncommonAttack1": {
+    "NAME": "UnCommon Attack1",
+    "DESCRIPTION": "Just TEST."
+  },
+  "trainingmod:UncommonAttack2": {
+    "NAME": "UnCommon Attack2",
+    "DESCRIPTION": "Just TEST."
+  },
+  "trainingmod:UncommonAttack3": {
+    "NAME": "UnCommon Attack3",
+    "DESCRIPTION": "Just TEST."
+  },
+  "trainingmod:RareAttack0": {
+    "NAME": "Rare Attack0",
+    "DESCRIPTION": "Just TEST."
+  },
+  "trainingmod:RareAttack1": {
+    "NAME": "Rare Attack1",
+    "DESCRIPTION": "Just TEST."
+  },
+  "trainingmod:RareAttack2": {
+    "NAME": "Rare Attack2",
+    "DESCRIPTION": "Just TEST."
+  },
+  "trainingmod:RareAttack3": {
+    "NAME": "Rare Attack3",
+    "DESCRIPTION": "Just TEST."
+  },
   "trainingmod:TestSkill": {
     "NAME": "TEST Skill",
     "DESCRIPTION": "Just TEST."
   },
+  "trainingmod:CommonSkill0": {
+    "NAME": "Common Skill0",
+    "DESCRIPTION": "Just TEST."
+  },
+  "trainingmod:CommonSkill1": {
+    "NAME": "Common Skill1",
+    "DESCRIPTION": "Just TEST."
+  },
+  "trainingmod:CommonSkill2": {
+    "NAME": "Common Skill2",
+    "DESCRIPTION": "Just TEST."
+  },
+  "trainingmod:CommonSkill3": {
+    "NAME": "Common Skill3",
+    "DESCRIPTION": "Just TEST."
+  },
+  "trainingmod:UncommonSkill0": {
+    "NAME": "UnCommon Skill0",
+    "DESCRIPTION": "Just TEST."
+  },
+  "trainingmod:UncommonSkill1": {
+    "NAME": "UnCommon Skill1",
+    "DESCRIPTION": "Just TEST."
+  },
+  "trainingmod:UncommonSkill2": {
+    "NAME": "UnCommon Skill2",
+    "DESCRIPTION": "Just TEST."
+  },
+  "trainingmod:UncommonSkill3": {
+    "NAME": "UnCommon Skill3",
+    "DESCRIPTION": "Just TEST."
+  },
+  "trainingmod:RareSkill0": {
+    "NAME": "Rare Skill0",
+    "DESCRIPTION": "Just TEST."
+  },
+  "trainingmod:RareSkill1": {
+    "NAME": "Rare Skill1",
+    "DESCRIPTION": "Just TEST."
+  },
+  "trainingmod:RareSkill2": {
+    "NAME": "Rare Skill2",
+    "DESCRIPTION": "Just TEST."
+  },
+  "trainingmod:RareSkill3": {
+    "NAME": "Rare Skill3",
+    "DESCRIPTION": "Just TEST."
+  },
   "trainingmod:TestPower": {
     "NAME": "TEST Power",
+    "DESCRIPTION": "Just TEST."
+  },
+  "trainingmod:CommonPower0": {
+    "NAME": "Common Power0",
+    "DESCRIPTION": "Just TEST."
+  },
+  "trainingmod:CommonPower1": {
+    "NAME": "Common Power1",
+    "DESCRIPTION": "Just TEST."
+  },
+  "trainingmod:CommonPower2": {
+    "NAME": "Common Power2",
+    "DESCRIPTION": "Just TEST."
+  },
+  "trainingmod:CommonPower3": {
+    "NAME": "Common Power3",
+    "DESCRIPTION": "Just TEST."
+  },
+  "trainingmod:UncommonPower0": {
+    "NAME": "UnCommon Power0",
+    "DESCRIPTION": "Just TEST."
+  },
+  "trainingmod:UncommonPower1": {
+    "NAME": "UnCommon Power1",
+    "DESCRIPTION": "Just TEST."
+  },
+  "trainingmod:UncommonPower2": {
+    "NAME": "UnCommon Power2",
+    "DESCRIPTION": "Just TEST."
+  },
+  "trainingmod:UncommonPower3": {
+    "NAME": "UnCommon Power3",
+    "DESCRIPTION": "Just TEST."
+  },
+  "trainingmod:RarePower0": {
+    "NAME": "Rare Power0",
+    "DESCRIPTION": "Just TEST."
+  },
+  "trainingmod:RarePower1": {
+    "NAME": "Rare Power1",
+    "DESCRIPTION": "Just TEST."
+  },
+  "trainingmod:RarePower2": {
+    "NAME": "Rare Power2",
+    "DESCRIPTION": "Just TEST."
+  },
+  "trainingmod:RarePower3": {
+    "NAME": "Rare Power3",
     "DESCRIPTION": "Just TEST."
   }
 }
