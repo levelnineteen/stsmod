@@ -8,12 +8,15 @@ import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.localization.CardStrings;
+import com.megacrit.cardcrawl.localization.CharacterStrings;
+import com.megacrit.cardcrawl.localization.RelicStrings;
 import training_mod.patches.*;
 
 @SpireInitializer
 public class Main implements
-        EditCardsSubscriber,   // カードを追加する場合にimplementする
-        EditStringsSubscriber  // 言語ファイルを読み込む場合に implementする
+    EditCardsSubscriber,   // カードを追加する場合にimplementする
+    EditStringsSubscriber,  // 言語ファイルを読み込む場合に implementする
+    EditCharactersSubscriber //キャラを追加する場合にimplementする
 {
     private static final Color TRAINING_COLOR_BG = CardHelper.getColor(100.0f, 50.0f, 50.0f);
     private static final String ATTACK_TRAINING         = "img/cards/bg_attack_512.png";
@@ -60,6 +63,8 @@ public class Main implements
         // 独自定義した言語ファイルを追加
         // Settings.languageには日本語ならJPN, 英語ならENGが入っている
         BaseMod.loadCustomStringsFile(CardStrings.class, "localization/cards-" + Settings.language + ".json");
+        BaseMod.loadCustomStringsFile(RelicStrings.class, "localization/relics-" + Settings.language + ".json");
+        BaseMod.loadCustomStringsFile(CharacterStrings.class, "localization/char-" + Settings.language + ".json");
     }
 
     @Override
@@ -68,5 +73,17 @@ public class Main implements
         BaseMod.addCard(new training_mod.cards.TestAttack());
         BaseMod.addCard(new training_mod.cards.TestPower());
         BaseMod.addCard(new training_mod.cards.TestSkill());
+    }
+
+    @Override
+    public void receiveEditCharacters() {
+        //独自定義のキャラの追加
+        BaseMod.addCharacter(
+                new training_mod.character.TrainingChar("TrainingCharacter"),
+                "img/charSelect/trainingButton.png",
+                "img/charSelect/trainingPortrait.png",
+                TrainingClassEnum.TrainingClass
+        );
+
     }
 }
